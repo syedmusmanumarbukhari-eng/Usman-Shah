@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TypeRush - Typing Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blobs"><i></i><i></i><i></i><i></i></div>
+<main>
+<!-- HOME SCREEN -->
+<section id="home">
+  <h1>TypeRush</h1>
+  <p class="sub">Pick a mode, pick a level, and type fast.</p>
+  <div class="cards">
+    <div class="card" id="cardA">
+      <h2>Bubbles</h2>
+      <p>Letters float upward in bubbles. Press the matching key to pop them before they reach the top. Wrong keys cost points.</p>
+      <div class="lbl">Difficulty</div>
+      <div class="seg" data-d><button data-v="easy">Easy</button><button data-v="medium" class="on">Medium</button><button data-v="hard">Hard</button></div>
+      <div class="note" data-note></div>
+      <button class="btn" data-start="A">Start Bubbles</button>
+    </div>
+    <div class="card" id="cardB">
+      <h2>KeyMagnet</h2>
+      <p>A target key lights up on the keyboard. Hit it as fast as you can. Every response is timed.</p>
+      <div class="lbl">Difficulty</div>
+      <div class="seg" data-d><button data-v="easy">Easy</button><button data-v="medium" class="on">Medium</button><button data-v="hard">Hard</button></div>
+      <div class="lbl">Key set</div>
+      <select id="ks"><option value="home">Home row (A S D F J K L)</option><option value="top">Top row (Q-P)</option><option value="bottom">Bottom row (Z-M)</option><option value="all">All letters</option></select>
+      <div class="note" data-note></div>
+      <button class="btn" data-start="B">Start KeyMagnet</button>
+    </div>
+  </div>
+</section>
+
+<!-- GAME SCREEN -->
+<section id="game" class="hide">
+  <div class="bar"><button class="btn alt" id="bHome">Home</button><h2 id="mt"></h2><span class="badge" id="db"></span></div>
+  <div class="hud" id="hud"></div>
+  <div class="fb" id="fb"></div>
+  <div id="stage">
+    <div id="idle">Press Start to play</div>
+    <div id="A"></div>
+    <div id="B">
+      <div id="tgt">?</div>
+      <div class="tb"><div id="fill"></div></div>
+      <div id="kb"></div>
+    </div>
+  </div>
+  <div class="ctrl">
+    <button class="btn go" id="bStart">Start</button>
+    <button class="btn" id="bRestart">Restart</button>
+    <button class="btn alt" id="bReset">Reset</button>
+  </div>
+</section>
+</main>
+
+<!-- RESULTS SCREEN -->
+<div class="modal hide" id="res"><div class="box">
+  <h2 id="rt"></h2><div class="big" id="rsc"></div><div id="rmsg"></div>
+  <div class="st" id="rst"></div>
+  <div class="ctrl"><button class="btn" id="rAgain">Play again</button><button class="btn alt" id="rHome">Home</button></div>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
